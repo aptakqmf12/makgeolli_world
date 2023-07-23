@@ -18,8 +18,13 @@ export default function Home() {
     if (!nameRef.current || !oldRef.current) return;
 
     const [name, old] = [nameRef.current.value, oldRef.current.value];
+
     createUser({ name, old }).then(() => {
       record();
+
+      if (!nameRef.current || !oldRef.current) return;
+      nameRef.current.value = "";
+      oldRef.current.value = "";
     });
   };
 
@@ -65,7 +70,6 @@ const UserCard = ({ user, record }: { user: UserType; record: () => void }) => {
     <li>
       {!editMode && (
         <>
-          <span>{user.id}</span>
           <span>{name}</span>
           <span>{old}</span>
         </>
