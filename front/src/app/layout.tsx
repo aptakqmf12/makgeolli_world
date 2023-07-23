@@ -1,5 +1,6 @@
 import Header from "@/component/header";
 import { Inter } from "next/font/google";
+import StyledComponentsRegistry from "./register";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        {children}
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   );
