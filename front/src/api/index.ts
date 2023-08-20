@@ -42,6 +42,6 @@ export const updateUser = async ({
   return await axios.put(`${BASE_URL}/users/update`, body);
 };
 
-export const requestLogin = async (id: string, pw: string) => {
-  return await axios.post(`${BASE_URL}/requestLogin`, { id, pw });
+export const signin = async (id: string, pw: string) => {
+  return await axios.post(`${BASE_URL}/signin`, { id, pw });
 };

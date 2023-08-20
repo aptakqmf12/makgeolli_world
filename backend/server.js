@@ -6,6 +6,7 @@ const db = require("./db/index.ts");
 const session = require("express-session");
 const MySQLStore = require("express-mysql-session")(session);
 const userQuery = require("./queries/user");
+const jwt = require("jsonwebtoken")
 
 const sessionStore = new MySQLStore(
   {
@@ -68,7 +69,7 @@ app.put("/users/update", (req, res) => {
   res.send("user updated.");
 });
 
-app.post("/requestLogin", (req, res) => {
+app.post("/signin", (req, res) => {
   const { id, pw } = req.body;
 
   db.query(
@@ -83,6 +84,20 @@ app.post("/requestLogin", (req, res) => {
       if (results.length === 0) {
         return res.status(401).json({ error: "Invalid credentials" });
       }
+
+      let token = "";
+      token = jwt.sign(
+        {
+          type: "JWT",
+          nickname: "nickname",
+          profile: "profile",
+        },
+        "key",
+        {
+          expiresIn: "15m", // 15분후 만료
+          issuer: "토큰발급자",
+        }
+      );
 
       return res.json(results);
     }

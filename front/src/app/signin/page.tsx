@@ -1,5 +1,5 @@
 "use client";
-import { requestLogin } from "@/api";
+import { signin } from "@/api";
 import { useState, useEffect, ChangeEvent } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/navigation";
@@ -14,7 +14,7 @@ export default function Signin() {
     e.preventDefault();
     if (id.length === 0 || pw.length === 0) return;
 
-    const res = await requestLogin(id, pw);
+    const res = await signin(id, pw);
     console.log(res);
 
     if (res.status === 200) {

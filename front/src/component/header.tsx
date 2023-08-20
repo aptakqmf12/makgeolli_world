@@ -8,6 +8,7 @@ export default function Header() {
     <nav.header>
       <Link href={"/"}>home</Link>
       <Link href={"/users"}>users</Link>
+      <Link href={"/signin"}>signin</Link>
     </nav.header>
   );
 }
