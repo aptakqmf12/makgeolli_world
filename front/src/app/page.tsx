@@ -2,17 +2,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import styled from "styled-components";
-import { worker } from "@/mock/worker";
 import { Makgeolli } from "@/types";
 import MakgeolliCard from "@/component/makgeolliCard";
-
-worker.start();
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const [makgeolliList, setMakgeolliList] = useState<Makgeolli[]>([]);
 
   const getMakgeollis = async () => {
-    const res = await axios.get("/makgeolli");
+    const res = await axios.get("/makgeolliList");
 
     setMakgeolliList(res.data);
   };
@@ -27,7 +26,10 @@ export default function Home() {
 
       <Styled.ListBox>
         {makgeolliList.map((makgeolli, i) => (
-          <li key={i}>
+          <li
+            onClick={() => router.push(`../makgeolliView?id=${makgeolli.id}`)}
+            key={i}
+          >
             <MakgeolliCard {...makgeolli} />
           </li>
         ))}

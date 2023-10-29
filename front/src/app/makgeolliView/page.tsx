@@ -1,29 +1,35 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Makgeolli } from "@/types";
+import axios from "axios";
 import {
   useRouter,
   usePathname,
   useParams,
   useSearchParams,
 } from "next/navigation";
+import MakgeolliCard from "@/component/makgeolliCard";
 
 export default function MakgeolliView() {
-  const router = useRouter();
-  const params = useParams();
-  const pathname = usePathname();
   const searchParams = useSearchParams();
+  const id = searchParams.get("id");
+
+  const [info, setInfo] = useState<Makgeolli>();
+
+  const record = async () => {
+    const res = await axios.get(`/makgeolliView?id=${id}`);
+    setInfo(res.data);
+  };
 
   useEffect(() => {
-    const url = `${pathname}?${searchParams}`;
-    console.log(url);
-    // You can now use the current URL
-    // ...
-  }, [pathname, searchParams]);
+    record();
+  }, [id]);
 
   return (
     <div>
-      <div></div>
+      <h2>{info?.name}</h2>
+
+      {info && <MakgeolliCard {...info} />}
     </div>
   );
 }
