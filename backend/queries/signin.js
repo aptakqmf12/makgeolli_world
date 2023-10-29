@@ -1,3 +1,1 @@
-const signin = (id, pw) => {
-    
-}
+const signin = (id, pw) => {};

@@ -6,14 +6,14 @@ const db = require("./db/index.ts");
 const session = require("express-session");
 const MySQLStore = require("express-mysql-session")(session);
 const userQuery = require("./queries/user");
-const jwt = require("jsonwebtoken")
+const jwt = require("jsonwebtoken");
 
 const sessionStore = new MySQLStore(
   {
     host: "127.0.0.1",
     port: 3306,
     user: "root",
-    password: "aptakqmf12!",
+    password: process.env.DB_PASSWORD,
     database: "crud",
   },
   db
