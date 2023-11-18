@@ -20,6 +20,11 @@ const StyledCard = styled.div`
   padding: 8px;
   border: 1px gray solid;
   border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #eee;
+  }
 
   .mak_name {
     margin-bottom: 8px;

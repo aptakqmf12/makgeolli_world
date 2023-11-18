@@ -6,14 +6,15 @@ import styled from "styled-components";
 import { Makgeolli } from "@/types";
 import MakgeolliCard from "@/component/makgeolliCard";
 import { useRouter } from "next/navigation";
+import Layout from "@/component/layout/layout";
 
 export default function Home() {
   return (
-    <Styled.Wrap>
+    <Layout>
       <Styled.Heading>막걸리 리스트</Styled.Heading>
 
       <MakgeolliList />
-    </Styled.Wrap>
+    </Layout>
   );
 }
 
@@ -49,9 +50,6 @@ const MakgeolliList = () => {
 };
 
 const Styled = {
-  Wrap: styled.div`
-    padding: 10px;
-  `,
   Heading: styled.h2`
     margin-bottom: 24px;
     font-size: 24px;

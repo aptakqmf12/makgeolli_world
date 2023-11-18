@@ -9,6 +9,7 @@ import {
   useSearchParams,
 } from "next/navigation";
 import MakgeolliCard from "@/component/makgeolliCard";
+import Layout from "@/component/layout/layout";
 
 export default function MakgeolliView() {
   const searchParams = useSearchParams();
@@ -26,10 +27,10 @@ export default function MakgeolliView() {
   }, [id]);
 
   return (
-    <div>
+    <Layout>
       <h2>{info?.name}</h2>
 
       {info && <MakgeolliCard {...info} />}
-    </div>
+    </Layout>
   );
 }
