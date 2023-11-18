@@ -1,8 +1,10 @@
 "use client";
 import Header from "@/component/layout/header";
-import { GlobalStyle } from "./globalStyle";
+import { GlobalStyle } from "../style/globalStyle";
 import StyledComponentsRegistry from "./register";
 import { worker } from "@/mock/worker";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import type { ThemeProviderProps } from "next-themes/dist/types";
 
 worker.start();
 
@@ -14,11 +16,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <GlobalStyle />
+        <NextThemesProvider storageKey="data-theme" attribute="data-theme">
+          <GlobalStyle />
 
-        <Header />
+          <Header />
 
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </NextThemesProvider>
       </body>
     </html>
   );
