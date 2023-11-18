@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 	--font: "#000";
     --background: #fff;
     --onBackground: #fff;
-    --surface: #fff;
+    --surface: #999;
     --onSurface: #fff;
     --primary: #6200ee;
     --primaryValient: #3700b3;
@@ -25,9 +25,9 @@ export const GlobalStyle = createGlobalStyle`
 
 [data-theme='dark'] {
 	--font: #fff;
-    --background: #121212;
+    --background: #434343;
     --onBackground: #fff;
-    --surface: #121212;
+    --surface: #b0b0b0;
     --onSurface: #fff;
     --primary: #bb86fc;
     --primaryValient: #3700b3;
@@ -59,7 +59,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	color: var(--primary);
+	color: var(--font);
+  box-sizing: border-box;
 	
 }
 /* HTML5 display-role reset for older browsers */

@@ -12,5 +12,7 @@ export default function Layout({ children }: LayoutProps) {
 const section = {
   layout: styled.section`
     padding: 24px;
+    background-color: var(--background);
+    min-height: calc(100vh - 54px);
   `,
 };
