@@ -13,8 +13,8 @@ export default function Header() {
     <StyledHeader>
       <ul className="nav">
         <Link href={"/"}>home</Link>
-        <Link href={"/users"}>users</Link>
-        <Link href={"/signin"}>signin</Link>
+        {/* <Link href={"/users"}>users</Link>
+        <Link href={"/signin"}>signin</Link> */}
       </ul>
 
       <div className="utils">
@@ -30,6 +30,7 @@ export default function Header() {
 const StyledHeader = styled.nav`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 10px;
   padding: 8px;
   background-color: #006bc9;
@@ -37,6 +38,7 @@ const StyledHeader = styled.nav`
   .nav {
     display: flex;
     justify-content: flex-start;
+    gap: 8px;
 
     > a {
       color: #fff;
