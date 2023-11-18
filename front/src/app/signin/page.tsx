@@ -3,6 +3,8 @@ import { signin } from "@/api";
 import { useState, useEffect, ChangeEvent } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/navigation";
+import CommonInput from "@/component/common/input";
+import Layout from "@/component/layout/layout";
 
 export default function Signin() {
   const router = useRouter();
@@ -24,12 +26,14 @@ export default function Signin() {
   };
 
   return (
-    <div>
+    <Layout>
       <FormWrapper onSubmit={handleSubmit}>
         <label>
           아이디
           <input value={id} onChange={(e) => setId(e.target.value)} />
         </label>
+
+        <CommonInput value={id} setValue={setId} />
 
         <label>
           비밀번호
@@ -38,7 +42,7 @@ export default function Signin() {
 
         <button type="submit">로그인</button>
       </FormWrapper>
-    </div>
+    </Layout>
   );
 }
 

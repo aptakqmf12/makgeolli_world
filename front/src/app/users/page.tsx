@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { fetchUsers, UserType } from "@/api";
 import { createUser, removeUser, updateUser } from "../../api/index";
+import Layout from "@/component/layout/layout";
 
 export default function Home() {
   const [userList, setUserList] = useState<UserType[]>([]);
@@ -32,7 +33,7 @@ export default function Home() {
     record();
   }, []);
   return (
-    <>
+    <Layout>
       <h2>userList</h2>
 
       <ul>
@@ -44,7 +45,7 @@ export default function Home() {
       <input type={"text"} ref={nameRef} />
       <input type={"number"} ref={oldRef} />
       <button onClick={onCreateUser}>createUser!</button>
-    </>
+    </Layout>
   );
 }
 
