@@ -14,5 +14,8 @@
     "start:backend": "npm run dev -w @monorepo/backend"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.9.2"
+  }
 }
