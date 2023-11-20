@@ -1,0 +1,18 @@
+{
+  "name": "makgeolli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "front",
+    "backend"
+  ],
+  "scripts": {
+    "dev:front": "npm run dev -w @monorepo/front",
+    "build:front": "npm run build -w @monorepo/front",
+    "start:backend": "npm run dev -w @monorepo/backend"
+  },
+  "author": "",
+  "license": "ISC"
+}
