@@ -9,6 +9,7 @@
     "backend"
   ],
   "scripts": {
+    "test:front": "npm run test -w @monorepo/front",
     "dev:front": "npm run dev -w @monorepo/front",
     "build:front": "npm run build -w @monorepo/front",
     "start:backend": "npm run dev -w @monorepo/backend"

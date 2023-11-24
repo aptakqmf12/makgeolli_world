@@ -1,0 +1,85 @@
+[
+  {
+    "id": "1",
+    "name": "느린마을",
+    "price": 3000,
+    "comment": "밸런스와 가성비가 우수한 무 아스파탐 막걸리",
+    "flavor": {
+      "sweet": 5,
+      "acid": 5,
+      "carbonic": 5,
+      "body": 5
+    }
+  },
+  {
+    "id": "2",
+    "name": "해창 12도",
+    "price": 18000,
+    "comment": "찹쌀로 만든 누룩의 향이 가득한 걸죽한 막걸리",
+    "flavor": {
+      "sweet": 3,
+      "acid": 4,
+      "carbonic": 0,
+      "body": 4
+    }
+  },
+  {
+    "id": "3",
+    "name": "해창 9도",
+    "price": 12000,
+    "comment": "찹쌀로 만든 누룩의 향이 가득한 막걸리",
+    "flavor": {
+      "sweet": 2,
+      "acid": 3,
+      "carbonic": 0,
+      "body": 3
+    }
+  },
+  {
+    "id": "4",
+    "name": "복순도가",
+    "price": 12000,
+    "comment": "강렬한 탄산과 상큼한 맛이 인상적인 여심 자극 막걸리",
+    "flavor": {
+      "sweet": 4,
+      "acid": 4,
+      "carbonic": 5,
+      "body": 2
+    }
+  },
+  {
+    "id": "5",
+    "name": "담은",
+    "price": 10000,
+    "comment": "우유와 같은 몽글몽글한 질감의 막걸리",
+    "flavor": {
+      "sweet": 4,
+      "acid": 2,
+      "carbonic": 0,
+      "body": 3
+    }
+  },
+  {
+    "id": "6",
+    "name": "나루생 12도",
+    "comment": "경복쌀로 만든 힙한 서울 막걸리",
+    "flavor": {
+      "sweet": 5,
+      "acid": 2,
+      "carbonic": 0,
+      "body": 4
+    }
+  },
+  {
+    "id": "7",
+    "name": "나루생 6도",
+    "price": 7000,
+    "comment": "경복쌀로 만든 힙한 서울 막걸리",
+    "flavor": {
+      "sweet": 4,
+      "acid": 2,
+      "carbonic": 0,
+      "body": 2
+    }
+  }
+]
