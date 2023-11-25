@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import { Makgeolli } from "@/types";
 import axios from "axios";
-import { useSearchParams } from "next/navigation";
 import Layout from "@/component/layout/layout";
 import Image from "next/image";
 import styled from "styled-components";
