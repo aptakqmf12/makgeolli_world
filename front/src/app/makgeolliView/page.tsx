@@ -10,8 +10,11 @@ import { Rating } from "@mui/material";
 import CommonPieChart from "@/component/chart/pie";
 
 export default function MakgeolliView() {
-  const searchParams = useSearchParams();
-  const id = searchParams.get("id");
+  // const searchParams = useSearchParams(); // test가 안돼..
+  // const id = searchParams.get("id");
+
+  const urlParam = new URLSearchParams(window.location.search);
+  const id = urlParam.get("id");
 
   const [info, setInfo] = useState<Makgeolli>();
 
@@ -22,9 +25,9 @@ export default function MakgeolliView() {
 
   useEffect(() => {
     record();
-  }, [id]);
+  }, []);
 
-  if (!info) return <>정보가 없습니다.</>;
+  if (!info) return <div>정보가 없습니다.</div>;
 
   return (
     <Layout>
