@@ -22,9 +22,7 @@ export default function Home() {
     <Layout>
       <Styled.Heading>막걸리 리스트</Styled.Heading>
 
-      <Suspense fallback={<div>막걸리 리스트 준비중...</div>}>
-        <MakgeolliList />
-      </Suspense>
+      <MakgeolliList />
     </Layout>
   );
 }
